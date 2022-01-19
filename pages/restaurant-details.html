@@ -128,8 +128,6 @@
                             <div class="about-btn">
                                 <button style="padding:10px; background-color: #1da1f3; color: white; border: none; float: left"
                                         onclick="openModal();currentSlide(1)">View Menu</button>
-                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none; float: right"
-                                        onclick="book()">Pre Order</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -164,8 +162,6 @@
                             <div class="about-btn">
                                 <button style="padding:10px; background-color: #1da1f3; color: white; border: none; float: left"
                                         onclick="openModal();currentSlide(1)">View Menu</button>
-                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none; float: right"
-                                        onclick="book()">Pre Order</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -200,8 +196,6 @@
                             <div class="about-btn">
                                 <button style="padding:10px; background-color: #1da1f3; color: white; border: none; float: left"
                                         onclick="openModal();currentSlide(1)">View Menu</button>
-                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none; float: right"
-                                        onclick="book()">Pre Order</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -403,46 +397,6 @@
 
 <!-- sweat alert -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script>
-    function book(){
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
-
-        swalWithBootstrapButtons.fire({
-            title: 'Choose menu item',
-            showCancelButton: false,
-            confirmButtonText: 'Pre order',
-            reverseButtons: true,
-            width: '600px',
-            height: '400px',
-            fontsize: '20px',
-            html:
-                '<div>' +
-                    '<select style="width: 300px; padding: 15px">' +
-                        '<option>Peda ting ting (150tk)</option>' +
-                        '<option>Pizza (200tk)</option>' +
-                        '<option>Pasta (150tk)</option>' +
-                    '</select>' +
-                    '<br />' +
-                    '<input id="swal-input2" class="swal2-input" style="width: 300px; padding:25px" placeholder="order amount">' +
-                '</div>',
-        }).then((result) => {
-            if (result.isConfirmed) {
-                swalWithBootstrapButtons.fire(
-                    'Pre order placed!',
-                    'Your order has been successfully placed.',
-                    'success'
-                )
-            }
-        })
-    }
-</script>
 
 </body>
 </html>

@@ -93,7 +93,7 @@
     <div class="container">
         <div class="gallary-header text-center">
             <h2>
-                Available local shops
+                Nearby Marketplaces
             </h2>
             <p>
                 Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
@@ -139,9 +139,6 @@
                             <div class="about-btn">
                                 <button style="padding:10px; background-color: #2e6e9e; color: white; border: none; float: left"
                                         onclick="viewProducts()">View Products</button>
-
-                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none; float: right"
-                                        onclick="purchase()">Purchase Item</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -187,9 +184,6 @@
                             <div class="about-btn">
                                 <button style="padding:10px; background-color: #2e6e9e; color: white; border: none; float: left"
                                         onclick="viewProducts()">View Products</button>
-
-                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none; float: right"
-                                        onclick="purchase()">Purchase Item</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -237,8 +231,6 @@
                                 <button style="padding:10px; background-color: #2e6e9e; color: white; border: none; float: left"
                                         onclick="viewProducts()">View Products</button>
 
-                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none; float: right"
-                                        onclick="purchase()">Purchase Item</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -445,44 +437,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-    function purchase(){
-        const swalWithBootstrapButtons = Swal.mixin({
-            customClass: {
-                confirmButton: 'btn btn-success',
-                cancelButton: 'btn btn-danger'
-            },
-            buttonsStyling: false
-        })
-
-        swalWithBootstrapButtons.fire({
-            title: 'Choose item',
-            showCancelButton: false,
-            confirmButtonText: 'Purchase',
-            reverseButtons: true,
-            width: '600px',
-            height: '400px',
-            fontsize: '20px',
-            html:
-                '<div>' +
-                '<select style="width: 300px; padding: 15px">' +
-                '<option>Jacket (150tk)</option>' +
-                '<option>Shari (200tk)</option>' +
-                '<option>Punjabi (150tk)</option>' +
-                '</select>' +
-                '<br />' +
-                '<input id="swal-input2" class="swal2-input" style="width: 300px; padding:25px" placeholder="order amount">' +
-                '</div>',
-        }).then((result) => {
-            if (result.isConfirmed) {
-                swalWithBootstrapButtons.fire(
-                    'Purchase done!',
-                    'Purchase payment done successfully!.',
-                    'success'
-                )
-            }
-        })
-    }
-
     function viewProducts(){
         var html = '';
 
@@ -512,10 +466,7 @@
                 '                            </div><!--/.packages-para-->\n' +
                 '\n' +
                 '<div class="about-btn">\n' +
-                '                                <button style="padding:10px; background-color: #00D8D6; color: white; border: none;"\n' +
-                '                                        onclick="buyItem()">Buy this item</button>\n' +
                 '                            </div><!--/.book-btn-->\n' +
-                '                            <div class="clearfix"></div>\n' +
                 '                        </div><!--/.single-package-item-txt-->\n' +
                 '                    </div><!--/.single-package-item-->' +
                 '</div>';
@@ -537,16 +488,6 @@
                     'success'
                 )
             }
-        })
-    }
-
-    function buyItem(){
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Item bought!',
-            showConfirmButton: false,
-            timer: 2500
         })
     }
 </script>
