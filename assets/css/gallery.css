@@ -1,0 +1,12 @@
+/*.home1-testm-img*/
+.testemonial .owl-carousel .owl-item img {
+    display: inline-block;
+    width: 400px !important;
+    height: 400px !important;
+    line-height: 80px;
+    border-radius: 0 !important;
+}/*.home1-testm-img*/
+
+.home1-testm-single{
+    padding: 0 !important;
+}
