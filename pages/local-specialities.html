@@ -104,7 +104,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
-                        <img src="../assets/images/gallary/kaptai.jpg"  style="height: 300px;width:370px" alt="package-place">
+                        <img src="../assets/images/gallary/localMarket.jpg"  style="height: 300px;width:370px" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Shop 1<span class="pull-right">Open</span></h3>
                             <div class="packages-para">
@@ -139,7 +139,7 @@
 
                             <div class="about-btn">
                                 <button style="padding:10px; background-color: #2e6e9e; color: white; border: none; float: left"
-                                        onclick="viewProducts()">View Products</button>
+                                        onclick="viewNokshiProducts()">View Products</button>
                             </div><!--/.book-btn-->
                             <div class="clearfix"></div>
                         </div><!--/.single-package-item-txt-->
@@ -149,7 +149,7 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
-                        <img src="../assets/images/gallary/st_martin.jpg"  style="height: 300px;width:370px" alt="package-place">
+                        <img src="../assets/images/gallary/localMarket.jpg"  style="height: 300px;width:370px" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Shop 2<span class="pull-right">Closed</span></h3>
                             <div class="packages-para">
@@ -194,7 +194,7 @@
 
                 <div class="col-md-4 col-sm-6">
                     <div class="single-package-item">
-                        <img src="../assets/images/gallary/sajek.jpg"  style="height: 300px;width:370px" alt="package-place">
+                        <img src="../assets/images/gallary/localMarket.jpg"  style="height: 300px;width:370px" alt="package-place">
                         <div class="single-package-item-txt">
                             <h3>Shop 3<span class="pull-right">Open</span></h3>
                             <div class="packages-para">
@@ -245,7 +245,7 @@
 </section><!--/.packages-->
 <!--available shops end-->
 
-<!-- room pictures start -->
+<!-- item pictures start -->
 <div class="container" style=" margin-bottom: 50px">
     <h2 style="text-align:center;margin-bottom: 20px;">Image Gallery</h2>
 
@@ -312,7 +312,7 @@
     </div>
 
 </div>
-<!-- room pictures ends -->
+<!-- item pictures ends -->
 
 
 <!-- footer-copyright start -->
@@ -447,6 +447,60 @@
                 '                        <img src="../assets/images/gallary/kaptai.jpg"  style="height: 300px;width:370px" alt="package-place">\n' +
                 '                        <div class="single-package-item-txt">\n' +
                 '                            <h3>Item ' + i + ' <span class="pull-right"> BDT ' + Math.floor((Math.random() * 500) + 100) +  '</span></h3>\n' +
+                '                            <div class="packages-para">\n' +
+                '                                <p>\n' +
+                '                                    <span>\n' +
+                '                                        <i class="fa fa-angle-right"></i> fasjfijof\n' +
+                '                                    </span>\n' +
+                '                                </p>\n' +
+                '                                <p>\n' +
+                '                                    <span>\n' +
+                '                                        <i class="fa fa-angle-right"></i>  dapspk\n' +
+                '                                    </span>\n' +
+                '                                </p>\n' +
+                '\n' +
+                '                                <p>\n' +
+                '                                    <span>\n' +
+                '                                        <i class="fa fa-angle-right"></i>  eifpokf\n' +
+                '                                    </span>\n' +
+                '                                </p>\n' +
+                '                            </div><!--/.packages-para-->\n' +
+                '\n' +
+                '<div class="about-btn">\n' +
+                '                            </div><!--/.book-btn-->\n' +
+                '                        </div><!--/.single-package-item-txt-->\n' +
+                '                    </div><!--/.single-package-item-->' +
+                '</div>';
+        }
+
+        Swal.fire({
+            title: 'All items of this shop',
+            showCancelButton: false,
+            showConfirmButton: false,
+            width: '1300px',
+            height: '400px',
+            fontsize: '20px',
+            html: html,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'Purchase done!',
+                    'Purchase payment done successfully!.',
+                    'success'
+                )
+            }
+        })
+    }
+
+    function viewNokshiProducts(){
+        var html = '';
+
+        for(var i = 1; i<=5; i++){
+            html += '<div class="col-md-4 col-sm-6">' +
+                '<div class="single-package-item">\n' +
+                '                        <img src="../assets/images/gallary/nokshi.jpg"  style="height: 300px;width:370px" alt="package-place">\n' +
+                '                        <div class="single-package-item-txt">\n' +
+                '                            <h3>Pahari Nokshi Shal ' + i + ' <span class="pull-right"> BDT ' + Math.floor((Math.random() * 500) + 100) +  '</span></h3>\n' +
                 '                            <div class="packages-para">\n' +
                 '                                <p>\n' +
                 '                                    <span>\n' +
