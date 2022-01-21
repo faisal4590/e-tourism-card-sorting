@@ -949,28 +949,24 @@
 				})
 			}
 			function travelPlan(){
-				var html = '<div class="single-package-item">\n' +
-								'                        <div class="single-package-item-txt">\n' +
-								'                            <h3>Travel Route <span class="pull-right"> By Bus </span></h3>\n' +
-								'                            <div class="packages-para">\n' +
-								'                                <p>\n' +
-								'                                    <span>\n' +
-								'                                        <i class="fa fa-angle-right"></i> <strong>Bus Name: </strong> Hanif\n' +
-								'                                    </span>\n' +
-								'                                </p>\n' +
-								'                                <p>\n' +
-								'                                    <span>\n' +
-								'                                        <i class="fa fa-angle-right"></i>  <strong>Departure Time: </strong> 10PM\n' +
-								'                                    </span>\n' +
-								'                                </p>\n' +
-								'\n' +
-								'                                <p>\n' +
-								'                                    <span>\n' +
-								'                                        <i class="fa fa-angle-right"></i>  <strong>Duration: </strong> 2days \n' +
-								'                                    </span>\n' +
-								'                                </p>\n' +
-								'                            </div><!--/.packages-para-->\n' +
-								'                        </div><!--/.single-package-item-txt-->\n';
+				let html = '<hr><div class="packages-para">\n' +
+						'                                <p>\n' +
+						'                                    <span>\n' +
+						'                                        <i class="fa fa-angle-right"></i> <strong>Bus Name: </strong> Hanif\n' +
+						'                                    </span>\n' +
+						'                                </p>\n' +
+						'                                <p>\n' +
+						'                                    <span>\n' +
+						'                                        <i class="fa fa-angle-right"></i>  <strong>Departure Time: </strong> 10PM\n' +
+						'                                    </span>\n' +
+						'                                </p>\n' +
+						'\n' +
+						'                                <p>\n' +
+						'                                    <span>\n' +
+						'                                        <i class="fa fa-angle-right"></i>  <strong>Duration: </strong> 2days \n' +
+						'                                    </span>\n' +
+						'                                </p>\n' +
+						'                            </div><!--/.packages-para-->\n';
 
 				Swal.fire({
 					title: 'Travel details',
@@ -1000,9 +996,9 @@
 						}).then((result) => {
 							if (result.isConfirmed) {
 								Swal.fire(
-									'Tickets bought!',
-									'Your tickets have been successfully bought.',
-									'success'
+										'Tickets bought!',
+										'Your tickets have been successfully bought.',
+										'success'
 								)
 							}
 						})
